@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>ツイートくん</title>
+    <script src="script/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+
+<body>
+    <div id="header">
+        <p>ツイートくん</p>
+    </div>
+    <div id="wrapper">
+        <p><a href="howto.html">つかいかた</a></p>
+        <p class="label1">・ツイート用URLに組み込みたい内容を入力してください</p>
+        <textarea name="main" id="main" cols="40" rows="4"></textarea>
+        <div id="psb"></div>
+        <br>
+        <p class="label1">・付けたいハッシュタグを入力してください</p>
+        <input type="text" name="tag" id="tag" size="40">
+        <br>
+        <p><div id="exe">生成</div></p>
+        <textarea name="result" id="result" cols="40" rows="4" value=""></textarea>
+        <div id="sample"></div>
+        
+        
+
+    </div>
+    <script>
+        $(function(){
+           $("#main").on("keyup",function(){
+               var count = 140 - $("#main").val().length;
+               $("#psb").html(count);
+               if(count < 0){
+                   $("#psb").css("color","red").html(count + "　文字数制限を超えています");
+               }else{
+                   $("#psb").css("color","black");
+               }
+               
+           }) ;
+           $("#exe").on("click",function(){
+               if(140 - $("#main").val().length >= 0){
+                    var sentence = $("#main").val();
+                    var tag = $("#tag").val();
+                    var code = "https://twitter.com/intent/tweet?text="+encodeURIComponent(sentence)+"&hashtags="+encodeURIComponent(tag);
+                    $("#result").val(code);
+                    $("#sample").html("<a href='"+code+"' target='_blank'>ツイートする(サンプル)</a>");
+               }else{
+                   $("#result").val("文字数制限を超えているためツイートすることができません");
+                   $("#sample").html("");
+               }
+           });
+        });
+    </script>
+</body>
+
+</html>

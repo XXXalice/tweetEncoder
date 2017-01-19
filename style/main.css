@@ -1,0 +1,74 @@
+body{
+    margin: 0 auto;
+    text-align: center;
+    background-color: floralwhite;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#header{
+    height: 100px;
+    width: 100%;
+    background-color: dodgerblue;
+    padding: 0;
+  
+}
+#header p{
+    margin: 0;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+}
+#wrapper{
+    height: 500px;
+    width: 500px;
+    margin: 30px auto;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+.label1{
+    font-size: 13px;
+    color: ghostwhite;
+    opacity: 0.8;
+}
+#main{
+    border:0;
+    padding:10px;
+    color: black;
+    border:solid 1px lightgray;
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+#tag{
+    border: 0;
+    padding: 10px;
+    color: black;
+    border:solid 1px lightgray;
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+#result{
+    border: 0;
+    padding: 10px;
+    color: black;
+    border:solid 1px lightgray;
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}
+#psb{
+    margin: 0;
+}
+#exe{
+    margin: 5px auto;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 20px;
+    box-shadow: 0px 2px 0px lightgray;
+    cursor: pointer;
+}
+#exe:hover{
+    opacity: 0.6;
+}
